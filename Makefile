@@ -13,15 +13,15 @@ SRC	=	ft_strlen.s\
 OBJDIR	=	.objs
 OBJ		=	$(SRC:%.s=$(OBJDIR)/%.o)
 
-NASM		= nasm
-NASMFLAGS	= -f elf64
+NASM		= /Users/sayoon/Downloads/nasm-2.16.03/nasm
+NASMFLAGS	= -f macho64
 
 MAKEFLAGS += --no-print-directory
 
 all :
 	@make $(NAME) $(MAKEFLAGS)
 
-test: main.c $(NAME)
+test:
 	@make all
 	@cc -Wall -Wextra -Werror main.c -o test -lasm -L.
 	@./test
@@ -52,4 +52,4 @@ re:
 	@make fclean
 	@make all
 
-.PHONY:	all bonus clean fclean re
+.PHONY:	all bonus clean fclean re test

@@ -1,9 +1,9 @@
 section .text
-	global ft_strcpy
+	global _ft_strcpy
 
-ft_strcpy:
-	mov rax, 0
-	mov rbx, rdi
+_ft_strcpy:
+	xor rax, rax
+	mov rdx, rdi
 
 copy:
     mov al, byte [rsi]
@@ -11,8 +11,8 @@ copy:
     inc rsi
     inc rdi
 
-	cmp al, 0
-	jne copy
+	test al, al
+	jnz copy
 
-	mov rax, rbx
+	mov rax, rdx
 	ret

@@ -1,19 +1,19 @@
 section .text
-	global ft_strcmp
+	global _ft_strcmp
 
-ft_strcmp:
-	mov rax, 0
-	mov rcx, 0
+_ft_strcmp:
+	xor rax, rax
+	xor rcx, rcx
 
 compare:
 	mov al, byte [rdi + rcx]
 	mov bl, byte [rsi + rcx]
 
-	cmp al, bl
-	jne diff
+	test al, bl
+	jnz diff
 
-	cmp al, 0
-	je end
+	test al, al
+	jz end
 
 	inc rcx
 	jmp compare
