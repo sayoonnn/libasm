@@ -69,7 +69,7 @@ int main() {
 	read(STDIN_FILENO, buf, 100);
 	fprintf(stdout, "ft_read: %s\n", buf);
 
-	fprintf(stdout, "\n=== ft_read ===\n");
+	fprintf(stdout, "\n=== ft_strdup ===\n");
 
 	char *tmp1 = strdup(str);
 	fprintf(stdout, "strdup: %p %s\n", tmp1, tmp1);
