@@ -3,13 +3,14 @@ section .text
 
 _ft_strcmp:
 	xor rax, rax
+	xor rbx, rbx
 	xor rcx, rcx
 
 compare:
 	mov al, byte [rdi + rcx]
 	mov bl, byte [rsi + rcx]
 
-	test al, bl
+	cmp al, bl
 	jnz diff
 
 	test al, al

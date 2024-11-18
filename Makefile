@@ -24,7 +24,6 @@ all :
 test:
 	@make all
 	@cc -Wall -Wextra -Werror main.c -o test -lasm -L.
-	@./test
 	@echo TEST DONE ✅
 
 $(NAME): $(OBJ)

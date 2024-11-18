@@ -20,7 +20,7 @@ int main() {
 	fprintf(stdout, "ft_strlen: %ld\n", ft_strlen(str));
 	fprintf(stdout, "strlen: %ld\n", strlen(str));
 
-	char *str2 = "Hello world?";
+	char *str2 = "Gello world?";
 	fprintf(stdout, "\n=== ft_strcmp ===\n");
 	fprintf(stdout, "s1: %s\n", str);
 	fprintf(stdout, "s2: %s\n", str2);
